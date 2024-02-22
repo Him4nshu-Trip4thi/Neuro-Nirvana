@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | NeuroNirvana</title>
-    <link rel="icon" type="image/x-icon" href="/NeuroNirvanaLogo.png">
+    <link rel="icon" type="image/x-icon" href="NeuroNirvanaLogo.png">
     <style>
         html {
             height: 100%;
@@ -164,14 +164,14 @@
 
 <body>
     <div class="logo">
-        <img src="/img/NeuroNirvanapng with bg.png" alt="NueroNirvana">
+        <img src="NeuroNirvanapng with bg.png" alt="NueroNirvana">
     </div>
     <div class="navbar">
-        <a href="/src/dashboard/Dashboard.html">Home</a>
-        <a href="/src/healthconditions/suicide.html">About</a>
-        <a href="/src/tests/Screeening.html">Screenings</a>
-        <a href="/src/blogs/DashQ1.html">Blogs</a>
-        <a href="/src/login/Login.html">LogIn/SignUp</a>
+        <a href="index.html">Home</a>
+        <a href="suicide.html">About</a>
+        <a href="Screeening.html">Screenings</a>
+        <a href="DashQ1.html">Blogs</a>
+        <a href="Login.html">LogIn/SignUp</a>
     </div>
     <main id="main-holder">
         <h1 id="login-header">Login to your account</h1>
@@ -199,7 +199,7 @@
             if (username === "admin" && password === "neuronirvana") {
                 const confirmed = window.confirm("You have successfully logged in. Welcome to NeuroNirvana !!");
                 if (confirmed) {
-                    window.location.href = "/src/dashboard/Dashboard.html";
+                    window.location.href = "/index.html";
                 }
             } else {
                 loginErrorMsg.style.opacity = 1;
