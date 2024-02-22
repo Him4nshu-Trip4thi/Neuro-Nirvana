@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Welcome to NeuroNirvana</title>
+    <link rel="icon" type="image/x-icon" href="/img/NeuroNirvanaLogo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background: white;
+            color: black;
+        }
+
+        .navbar {
+            background: #800060;
+            padding: 15px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: rgb(236, 95, 8);
+            /* box-shadow: 0 2px 5px rgb(236, 95, 8); */
+            color: #fff;
+        }
+
+        .logo {
+            text-align: center;
+            background: #800060;
+            background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .logo img {
+            height: auto;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        .heading {
+            color: black;
+            background-color: #F8EDF8;
+            /* box-shadow: 0 4px 15px #800060; */
+            width: 75%;
+            margin: 70px;
+            padding: 50px;
+            border-radius: 0px 40px 40px 40px;
+        }
+
+        .title {
+            font-size: 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font: bolder;
+            color: #800060;
+        }
+
+        .titlesmall {
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font: bolder;
+            color: #800060;
+        }
+
+        .working {
+            color: black;
+            background-color: #F8EDF8;
+            /* box-shadow: 0 4px 15px #800060; */
+            width: 75%;
+            margin: 70px;
+            padding: 50px;
+            border-radius: 0px 40px 40px 40px;
+        }
+
+        .working img{
+            height: 250px
+        }
+
+        .workingQues {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .workingQues a {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: #800060;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .workingQues a:hover {
+            background-color: rgb(236, 95, 8)
+        }
+
+        .workingQues a:active {
+            background-color: #800060;
+            border-radius: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #800060;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 15px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(236, 95, 8);
+        }
+        .button-block {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-block a {
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #800060;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-block a:hover {
+            background-color: rgb(236, 95, 8);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="logo">
+        <img src="/img/NeuroNirvanapng with bg.png" alt="NueroNirvana">
+    </div>
+    <div class="navbar">
+        <a href="/src/dashboard/Dashboard.html">Home</a>
+        <a href="/src/healthconditions/suicide.html">About</a>
+        <a href="/src/tests/Screeening.html">Screenings</a>
+        <a href="/src/blogs/DashQ1.html">Blogs</a>
+        <a href="/src/login/Login.html">LogIn/SignUp</a>
+    </div>
+
+    <div class="heading">
+        <p class="title">Take a Mental Health Test</p>
+        <p>Online screening is one of the quickest and easiest ways to determine whether you are experiencing symptoms
+            of a mental health condition.</p>
+        <p><strong>Mental health conditions, such as depression or anxiety, are real, common and treatable. And recovery
+                is possible.</strong></p>
+    </div>
+    <div class="working">
+        <div class="button-block">
+            <a href="/src/tests/DepressionTest.html">DEPRESSION TEST</a>
+            <a href="/src/tests/AnxietyTest.html">ANXIETY TEST</a>
+            <a href="/src/tests/PTSDTest.html">PTSD TEST</a>
+            <a href="/src/tests/ADHDTest.html">ADHD TEST</a>
+            <a href="/src/tests/BipolarTest.html">BIPOLAR TEST</a>
+        </div>
+    </div>
+        
+    </div>
+
+    <div class="working">
+        <p class="title">How does it work?</p>
+        <p>After your mental health test, you will see information, resources, and tools to help you understand and
+            improve your mental health.</p>
+        <p class="workingQues"><a href="/src/blogs/DashQ1.html">HOW CAN ONLINE MENTAL HEALTH TESTING HELP ME?</a></p>
+        <p><strong>Please note: </strong>Online screening tools are meant to be a quick snapshot of your mental health.
+            If your results indicate you may be experiencing symptoms of a mental illness, consider sharing your results
+            with someone. A mental health provider (such as a doctor or a therapist) can give you a full assessment and
+            talk to you about options for how to feel better.</p>
+        <p>This website is an informational resource. We are not a crisis support line.</p>
+        <p> If you need
+            immediate help, you can reach the <strong>National Suicide Prevention Helpline : 1800-121-3667 or Visit <a
+                    href="https://hellolifeline.org/">https://hellolifeline.org</a>.</strong></p> The Helpline provides
+        24/7, free and confidential support for people in distress, prevention and crisis resources for you or your
+        loved ones.</p>
+    </div>
+
+    <div class="working">
+        <p class="titlesmall">Learn About Mental Health Conditions</p>
+        <a href="/src/healthconditions/suicide.html" class="button">Suicide</a>
+        <a href="/src/healthconditions/ptsd.html" class="button">PTSD</a>
+        <a href="/src/healthconditions/adhd.html" class="button">ADHD</a>
+        <a href="/src/healthconditions/anxiety.html" class="button">Anxiety</a>
+        <a href="/src/healthconditions/bipolar.html" class="button">Bipolar</a>
+        <a href="/src/healthconditions/depression.html" class="button">Depression</a>
+    </div>
+
+    
+
+    <div class="working">
+        <p class="title">About NeuroNirvana</p>
+        <p>Neuronirvana is envisioned as a comprehensive mental health initiative aimed at addressing the diverse needs of individuals living with mental illness in India. With a focus on promoting mental health awareness, providing accessible resources, and advocating for holistic wellness, this project aims to make a meaningful impact on the mental well-being of communities across the country.</p>
+        
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipolar test | NeuroNirvana</title>
+    <link rel="icon" type="image/x-icon" href="/img/NeuroNirvanaLogo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background: #fff;
+            color: black;
+        }
+
+        .navbar {
+            background: #800060;
+            padding: 15px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background: rgb(236, 95, 8);
+            /* box-shadow: 0 2px 5px rgb(236, 95, 8); */
+            color: #fff;
+        }
+
+        .logo {
+            text-align: center;
+            background: #800060;
+            background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .logo img {
+            height: auto;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: #800060;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #800060;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(236, 95, 8);
+            color: #fff;
+        }
+
+        button:active{
+            background-color: green;
+        }
+
+        #result {
+            margin: 50px;
+            padding: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+        /* #result:hover{
+            margin: 25px;
+            padding: 70px;
+            font-size: 30px;
+
+        } */
+
+        .choices {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .choices:hover {
+            background: #800060;
+            color: #fff;
+        }
+
+        .choices.selected {
+            background-color: rgb(236, 95, 8);
+            color: #fff;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h2{
+            color: #6c757d;
+        }
+        .source-reference {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .source-reference p {
+            margin: 5px 0;
+        }
+
+        .source-reference .source-url {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .source-reference .source-url:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/img/NeuroNirvanapng with bg.png" alt="NueroNirvana">
+    </div>
+    <div class="navbar">
+        <a href="/src/dashboard/Dashboard.html">Home</a>
+        <a href="/src/healthconditions/suicide.html">About</a>
+        <a href="/src/tests/Screeening.html">Screenings</a>
+        <a href="/src/blogs/DashQ1.html">Blogs</a>
+        <a href="/src/login/Login.html">LogIn/SignUp</a>
+    </div>
+
+    <h1>Post-Traumatic Stress Disorder (PTSD) Test</h1>
+
+    <p>Sometimes things happen to people that are unusually or especially frightening, - horrible, or traumatic.</p>
+    <p> For example: </p>
+
+
+    <p> - a serious accident or fire</p>
+    <p> - a physical or sexual assault or abuse</p>
+    <p>- an earthquake or flood</p>
+    <p>- a war</p>
+    <p>- seeing someone be killed or seriously injured</p>
+    <p>- having a loved one die through homicide or suicide.</p>
+    <br>
+
+    <p>Have you ever experienced this kind of event?</p>
+
+    <p><strong>If YES - please answer the questions below.</strong></p>
+
+    <p><strong>In the past month, have you....</strong></p>
+    <p>Please note, all fields are required.</p>
+
+    <div class="question" id="q1">
+        <p>1. had nightmares about the event(s) or thought about the event(s) when you did not want to?</p>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="10"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="0"> No
+        </label>
+
+    </div>
+
+    <div class="question" id="q2">
+        <p>2. tried hard not to think about the event(s) or went out of your way to avoid situations that reminded you
+            of the event(s)?</p>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="10"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q3">
+        <p>3. been constantly on guard, watchful, or easily startled?</p>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="10"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="0"> No
+        </label>
+
+    </div>
+    <div class="question" id="q4">
+        <p>4. felt numb or detached from people, activities, or your surroundings?</p>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="10"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="0"> No
+        </label>
+
+    </div>
+    <div class="question" id="q5">
+        <p>5. felt guilty or unable to stop blaming yourself or others for the event(s) or any problems the event(s) may
+            have caused?</p>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="10"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="0"> No
+        </label>
+    </div>
+
+
+
+
+    <button onclick="calculateScore()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function selectOption(questionId, value) {
+            var question = document.getElementById(questionId);
+            var labels = question.getElementsByTagName('label');
+
+            for (var i = 0; i < labels.length; i++) {
+                labels[i].classList.remove('selected');
+            }
+
+            event.currentTarget.classList.add('selected');
+        }
+
+        function validateAndCalculate() {
+            var allQuestionsAnswered = true;
+            for (var i = 1; i <= 5; i++) {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (!selectedAnswer) {
+                    allQuestionsAnswered = false;
+                    break;
+                }
+            }
+
+            if (allQuestionsAnswered) {
+                calculateScore();
+                document.getElementById('error-message').style.display = 'none';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        function calculateScore() {
+            var score = 0;
+            for (var i = 1; i <= 5; i++) {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (selectedAnswer) {
+                    score += parseInt(selectedAnswer.value);
+                }
+            }
+
+            var resultElement = document.getElementById('result');
+            if (score <= 10) {
+                resultElement.textContent = 'Your severity score: ' + score + '. You are normal. If you still feel anxious, try meditating or take deep breaths.';
+            }
+            else if (score <= 30) {
+                resultElement.textContent = 'Your severity score: ' + score + '. Moderate. Checkup Recommended.';
+            }
+            else {
+                resultElement.textContent = 'Your severity score: ' + score + '. Extreme. Contact a psychiatrist immediately!';
+            }
+
+            if (score <= 10) {
+                resultElement.style.color = '#fff';
+                resultElement.style.backgroundColor = '#28a740';  // Green for low severity
+            }
+            else if (score <= 30) {
+                resultElement.style.color = '#fff';
+                resultElement.style.backgroundColor = 'rgb(236, 95, 8)';  // Orange for moderate severity
+            }
+            else {
+                resultElement.style.color = '#fff';
+                resultElement.style.backgroundColor = 'Red';  // Red for high severity
+            }
+        }
+
+
+    </script>
+    <footer>
+        <h2>Source : </h2>
+        <div class="source-reference">
+            <strong>Prins, et al. (2004). The primary care PTSD screen (PC-PTSD): Corrigendum. Primary Care Psychiatry 9(151).
+            </strong>
+          
+          <p>PC-PTSSD is in the Public Domain and available at : <a href="https://www.ptsd.va.gov/professional/assessment/screens/pc-ptsd.asp" target="_blank" class="source-url">https://www.ptsd.va.gov/professional/assessment/screens/pc-ptsd.asp</a></p>
+        </div>
+      </footer>
+</body>
+
+</html>

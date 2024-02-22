@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety test | NeuroNirvana</title>
+    <link rel="icon" type="image/x-icon" href="/img/NeuroNirvanaLogo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background: white;
+            color: black;
+        }
+        .navbar {
+            background: #800060;
+            padding: 15px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            box-shadow: 0 2px 4px black;
+            
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background:rgb(236, 95, 8);
+            /* box-shadow: 0 2px 5px rgb(236, 95, 8); */
+            color: #fff;
+        }
+
+        .logo {
+            text-align: center;
+            background: #800060;
+            background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .logo img {
+            height: auto;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: #800060;
+            border-radius: 5px;
+            padding:5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #800060;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color:rgb(236, 95, 8);
+            color:#fff;
+        }
+
+        button:active{
+            background-color: green;
+        }
+
+        #result {
+            margin: 50px;
+            padding: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+        /* #result:hover{
+            margin: 25px;
+            padding: 70px;
+            font-size: 30px;
+
+        } */
+
+        .choices {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .choices:hover {
+            background: #800060;
+            color: #fff;
+        }
+
+        .choices.selected {
+            background-color:rgb(236, 95, 8);
+            color: #fff;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h2{
+            color: #6c757d;
+        }
+        .source-reference {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .source-reference p {
+            margin: 5px 0;
+        }
+
+        .source-reference .source-url {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .source-reference .source-url:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/img/NeuroNirvanapng with bg.png" alt="NueroNirvana">
+    </div>
+    <div class="navbar">
+        <a href="/src/dashboard/Dashboard.html">Home</a>
+        <a href="/src/healthconditions/suicide.html">About</a>
+        <a href="/src/tests/Screeening.html">Screenings</a>
+        <a href="/src/blogs/DashQ1.html">Blogs</a>
+        <a href="/src/login/Login.html">LogIn/SignUp</a>
+    </div>
+
+    <h1>Anxiety Test</h1>
+
+    <p><strong>Over the last 2 weeks,</strong> how often have you been bothered by the following problems?</p>
+
+        <p>Please note, all fields are required.</p>
+
+    <div class="question" id="q1">
+        <p>1. Feeling nervous, anxious, or on edge</p>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="10"> Nearly Every day
+        </label>
+    </div>
+
+    <div class="question" id="q2">
+        <p>2. Not being able to stop or control worrying</p>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="10"> Nearly Every day
+        </label>
+    </div>
+    <div class="question" id="q3">
+        <p>3. Worrying too much about different things</p>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="10"> Nearly Every day
+        </label>
+    </div>
+    <div class="question" id="q4">
+        <p>4. Trouble relaxing</p>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="10"> Nearly Every day
+        </label>
+    </div>
+    <div class="question" id="q5">
+        <p>5. Being so restless that it is hard to sit still</p>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="10"> Nearly Every day
+        </label>
+    </div>
+    <div class="question" id="q6">
+        <p>6. Becoming easily annoyed or irritable</p>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="10"> Nearly Every day
+        </label>
+    </div>
+    <div class="question" id="q7">
+        <p>7. Feeling afraid, as if something awful might happen</p>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="0"> Not at all
+        </label>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="3"> Several days
+        </label>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="6"> More than half the days
+        </label>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="10"> Nearly Every day
+        </label>
+    </div>
+
+
+    
+
+    <button onclick="calculateScore()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function selectOption(questionId, value) 
+        {
+            var question = document.getElementById(questionId);
+            var labels = question.getElementsByTagName('label');
+
+            for (var i = 0; i < labels.length; i++) 
+            {
+                labels[i].classList.remove('selected');
+            }
+
+            event.currentTarget.classList.add('selected');
+        }
+
+        function validateAndCalculate() {
+            var allQuestionsAnswered = true;
+            for (var i = 1; i <= 5; i++) {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (!selectedAnswer) {
+                    allQuestionsAnswered = false;
+                    break;
+                }
+            }
+
+            if (allQuestionsAnswered) {
+                calculateScore();
+                document.getElementById('error-message').style.display = 'none';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        function calculateScore() 
+        {
+            var score = 0;
+            for (var i = 1; i <= 7; i++) 
+            {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (selectedAnswer) 
+                {
+                    score += parseInt(selectedAnswer.value);
+                }
+            }
+
+            var resultElement = document.getElementById('result');
+            if (score <= 21) 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. You are normal. If you still feel anxious, try meditating or take deep breaths.';
+            } 
+            else if (score <= 42) 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. Moderate. Checkup Recommended.';
+            } 
+            else 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. Extreme. Contact a psychiatrist immediately!';
+            }
+
+            if (score <= 21) 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = '#28a740';  // Green for low severity
+            } 
+            else if (score <= 42) 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = 'rgb(236, 95, 8)';  // Orange for moderate severity
+            } 
+            else 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = 'Red';  // Red for high severity
+            }
+        }
+
+        
+    </script>
+    <footer>
+        <h2>Source : </h2>
+        <div class="source-reference">
+            <p><strong>Primary Care Evaluation of Mental Disorders Patient Health Questionnaire (PRIME-MD-PHQ). The PHQ, including the GAD-7, was developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke, and colleagues. For research information, contact Dr. Spitzer at ris8@columbia.edu.
+            </strong></p>
+            <p><strong>Spitzer, Kroenke, et al. (2006). A brief measure for assessing generalized anxiety disorder: the GAD-7. Archives of Internal Medicine 166(10), 1092-1097.</strong></p>
+                <p><strong>Retrieved from : <a href="http://archinte.jamanetwork.com/article.aspx?articleid=410326" target="_blank" class="source-url">http://archinte.jamanetwork.com/article.aspx?articleid=410326</a></strong></p>
+          
+        </div>
+      </footer>
+</body>
+
+</html>

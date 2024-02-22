@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipolar test | NeuroNirvana</title>
+    <link rel="icon" type="image/x-icon" href="/img/NeuroNirvanaLogo.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background:#fff;
+            color: black;
+        }
+        .navbar {
+            background: #800060;
+            padding: 15px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            text-align: center;
+            box-shadow: 0 2px 4px black;
+            
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background:rgb(236, 95, 8);
+            /* box-shadow: 0 2px 5px rgb(236, 95, 8); */
+            color: #fff;
+        }
+
+        .logo {
+            text-align: center;
+            background: #800060;
+            background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            box-shadow: 0 2px 4px black;
+
+        }
+
+        .logo img {
+            height: auto;
+            width: 200px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            color: #800060;
+            border-radius: 5px;
+            padding:5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question p {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #800060;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color:rgb(236, 95, 8);
+            color:#fff;
+        }
+
+        button:active{
+            background-color: green;
+        }
+
+        #result {
+            margin: 50px;
+            padding: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            border-radius: 8px;
+        }
+
+        /* #result:hover{
+            margin: 25px;
+            padding: 70px;
+            font-size: 30px;
+
+        } */
+
+        .choices {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .choices:hover {
+            background: #800060;
+            color: #fff;
+        }
+
+        .choices.selected {
+            background-color:rgb(236, 95, 8);
+            color: #fff;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        h2{
+            color: #6c757d;
+        }
+        .source-reference {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .source-reference p {
+            margin: 5px 0;
+        }
+
+        .source-reference .source-url {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .source-reference .source-url:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/img/NeuroNirvanapng with bg.png" alt="NueroNirvana">
+    </div>
+    <div class="navbar">
+        <a href="/src/dashboard/Dashboard.html">Home</a>
+        <a href="/src/healthconditions/suicide.html">About</a>
+        <a href="/src/tests/Screeening.html">Screenings</a>
+        <a href="/src/blogs/DashQ1.html">Blogs</a>
+        <a href="/src/login/Login.html">LogIn/SignUp</a>
+    </div>
+
+    <h1>Bipolar test</h1>
+
+    <p>Please answer each question to the <strong>best of your ability.</strong></p>
+    <p>Please note, all fields are required.</p>
+
+    <div class="question" id="q1">
+        <p>1. Has there ever been a period of time when you were not your usual self and you felt so good or hyper that other people thought you were not your normal self or were so hyper that you got into trouble?</p>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q1', 0)">
+            <input type="radio" name="q1" value="0"> No
+        </label>
+        
+    </div>
+
+    <div class="question" id="q2">
+        <p>2. Has there ever been a period of time when you were not your usual self and you were so irritable that you shouted at people or started fights or arguments?</p>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q2', 0)">
+            <input type="radio" name="q2" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q3">
+        <p>3. Has there ever been a period of time when you were not your usual self and you felt much more self-confident than usual?</p>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q3', 0)">
+            <input type="radio" name="q3" value="0"> No
+        </label>
+        
+    </div>
+    <div class="question" id="q4">
+        <p>4. Has there ever been a period of time when you were not your usual self and you got much less sleep than usual and found you didn’t really miss it?</p>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q4', 0)">
+            <input type="radio" name="q4" value="0"> No
+        </label>
+        
+    </div>
+    <div class="question" id="q5">
+        <p>5. Has there ever been a period of time when you were not your usual self and you were much more talkative or spoke much faster than usual?</p>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q5', 0)">
+            <input type="radio" name="q5" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q6">
+        <p>6. Has there ever been a period of time when you were not your usual self and thoughts raced through your head or you couldn’t slow your mind down?</p>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q6', 0)">
+            <input type="radio" name="q6" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q7">
+        <p>7. Has there ever been a period of time when you were not your usual self and you were so easily distracted by things around you that you had trouble concentrating or staying on track?</p>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q7', 0)">
+            <input type="radio" name="q7" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q8">
+        <p>8. Has there ever been a period of time when you were not your usual self and you had much more energy than usual?</p>
+        <label class="choices" onclick="selectOption('q8', 0)">
+            <input type="radio" name="q8" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q8', 0)">
+            <input type="radio" name="q8" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q9">
+        <p>9. Has there ever been a period of time when you were not your usual self and you were much more social or outgoing than usual, for example, you telephoned friends in the middle of the night?</p>
+        <label class="choices" onclick="selectOption('q9', 0)">
+            <input type="radio" name="q9" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q9', 0)">
+            <input type="radio" name="q9" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q10">
+        <p>10. Has there ever been a period of time when you were not your usual self and you did things that were unusual for you or that other people might have thought were excessive, foolish, or risky?</p>
+        <label class="choices" onclick="selectOption('q10', 0)">
+            <input type="radio" name="q10" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q10', 0)">
+            <input type="radio" name="q10" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q11">
+        <p>11. Has there ever been a period of time when you were not your usual self and spending money got you or your family into trouble?</p>
+        <label class="choices" onclick="selectOption('q11', 0)">
+            <input type="radio" name="q11" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q11', 0)">
+            <input type="radio" name="q11" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q12">
+        <p>12. If you checked YES to more than one of the above, have several of these ever happened during the same period of time?</p>
+        <label class="choices" onclick="selectOption('q12', 0)">
+            <input type="radio" name="q12" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q12', 0)">
+            <input type="radio" name="q12" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q13">
+        <p>13. How much of a problem did any of these cause you?
+            Like being unable to work; having family, money or legal troubles; getting into arguments or fights?</p>
+        <label class="choices" onclick="selectOption('q13', 0)">
+            <input type="radio" name="q13" value="20"> Major Problem
+        </label>
+        <label class="choices" onclick="selectOption('q13', 0)">
+            <input type="radio" name="q13" value="10"> Minor Problem
+        </label>
+    </div>
+    <div class="question" id="q14">
+        <p>14.  Have any of your blood relatives had manic-depressive illness or bipolar disorder?
+            i.e. Children, siblings, parents, grandparents, aunts, and uncles.</p>
+        <label class="choices" onclick="selectOption('q14', 0)">
+            <input type="radio" name="q14" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q14', 0)">
+            <input type="radio" name="q14" value="0"> No
+        </label>
+    </div>
+    <div class="question" id="q15">
+        <p>15. Has a health professional ever told you that you have manic-depressive illness or bipolar disorder?</p>
+        <label class="choices" onclick="selectOption('q15', 0)">
+            <input type="radio" name="q15" value="5"> Yes
+        </label>
+        <label class="choices" onclick="selectOption('q15', 0)">
+            <input type="radio" name="q15" value="0"> No
+        </label>
+    </div>
+
+
+    
+
+    <button onclick="calculateScore()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function selectOption(questionId, value) 
+        {
+            var question = document.getElementById(questionId);
+            var labels = question.getElementsByTagName('label');
+
+            for (var i = 0; i < labels.length; i++) 
+            {
+                labels[i].classList.remove('selected');
+            }
+
+            event.currentTarget.classList.add('selected');
+        }
+
+        function validateAndCalculate() {
+            var allQuestionsAnswered = true;
+            for (var i = 1; i <= 5; i++) {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (!selectedAnswer) {
+                    allQuestionsAnswered = false;
+                    break;
+                }
+            }
+
+            if (allQuestionsAnswered) {
+                calculateScore();
+                document.getElementById('error-message').style.display = 'none';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        function calculateScore() 
+        {
+            var score = 0;
+            for (var i = 1; i <= 15; i++) 
+            {
+                var questionName = 'q' + i;
+                var selectedAnswer = document.querySelector('input[name="' + questionName + '"]:checked');
+
+                if (selectedAnswer) 
+                {
+                    score += parseInt(selectedAnswer.value);
+                }
+            }
+
+            var resultElement = document.getElementById('result');
+            if (score <= 30) 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. You are normal. If you still feel anxious, try meditating or take deep breaths.';
+            } 
+            else if (score <= 60) 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. Moderate. Checkup Recommended.';
+            } 
+            else 
+            {
+                resultElement.textContent = 'Your severity score: ' + score + '. Extreme. Contact a psychiatrist immediately!';
+            }
+
+            if (score <= 30) 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = '#28a740';  // Green for low severity
+            } 
+            else if (score <= 60) 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = 'rgb(236, 95, 8)';  // Orange for moderate severity
+            } 
+            else 
+            {
+                resultElement.style.color= '#fff';
+                resultElement.style.backgroundColor = 'Red';  // Red for high severity
+            }
+        }
+
+        
+    </script>
+    <footer>
+        <h2>Source : </h2>
+        <div class="source-reference">
+            <p><strong>Hirschfeld, et al. (2000) Development and Validation of a Screening Instrument for Bipolar Spectrum Disorder: The Mood Disorder Questionnaire. American Journal of Psychiatry 157(11), pp. 1873-1875.
+            </strong></p>
+          
+          <p>Retrieved from : <a href="http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873" target="_blank" class="source-url">http://ajp.psychiatryonline.org/doi/abs/10.1176/appi.ajp.157.11.1873</a></p>
+        </div>
+      </footer>
+</body>
+
+</html>
